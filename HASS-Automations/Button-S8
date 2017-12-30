@@ -1,0 +1,10 @@
+  alias: "TM1638 Button 8"
+  trigger:
+    platform: mqtt
+    topic: "tm1638/panel/keys"
+    payload: '8'
+  action:
+    - service: light.toggle
+      entity_id: light.NAME_OF_YOUR_LIGHT
+      
+# THIS WILL TOGGLE YOUR LIGHT    
