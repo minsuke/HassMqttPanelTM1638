@@ -1,0 +1,10 @@
+  alias: "TM1638 Alarm Disarm"
+  trigger:
+    platform: mqtt
+    topic: "tm1638/panel/keys"
+    payload: '1'
+  action:
+    - service: mqtt.publish
+      data:
+        topic: "tm1638/panel/set"
+        payload: 'DISARM'
