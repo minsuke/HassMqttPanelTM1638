@@ -1,0 +1,10 @@
+  alias: "TM1638 Alarm ArmAway"
+  trigger:
+    platform: mqtt
+    topic: "tm1638/panel/keys"
+    payload: '3'
+  action:
+    - service: mqtt.publish
+      data:
+        topic: "tm1638/panel/set"
+        payload: 'ARM_AWAY'
