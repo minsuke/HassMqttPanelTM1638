@@ -286,25 +286,25 @@ void loop() {
     // send to command_topic
     switch (k) {
     case 1:
-      client.publish("tm1638/panel/set", "1"); // "DISARM"
+      client.publish("tm1638/panel/set", "DISARM"); // "DISARM"
       state = Disarming;
       module.setDisplayToString("DISARM");
       resetSleep();
       break;
     case 2:
-      client.publish("tm1638/panel/set", "2"); // "ARM_HOME"
+      client.publish("tm1638/panel/set", "ARM_HOME"); // "ARM_HOME"
       state = Arming;
       module.setDisplayToString("ARM HOME");
       resetSleep();
       break;
     case 3:
-      client.publish("tm1638/panel/set", "3"); // "ARM_AWAY"
+      client.publish("tm1638/panel/set", "ARM_AWAY"); // "ARM_AWAY"
       state = Arming;
       module.setDisplayToString("ARM AWAY");
       resetSleep();
       break;
     case 4:
-      client.publish("tm1638/panel/set", "4"); // "ARM_NIGHT"
+      client.publish("tm1638/panel/set", "ARM_NIGHT"); // "ARM_NIGHT"
       state = Arming;
       module.setDisplayToString("ARMNIGHT");
       resetSleep();
